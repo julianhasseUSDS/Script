@@ -1,0 +1,435 @@
+(WELCOME AND THANK YOU MESSAGE BY GLORI)
+
+-------------------------------------------------------------------------------------------
+
+SLIDE 1 - COVER
+
+Glori: Before moving on, Jeff, do you want to share a few words with the team? (pause)
+ 
+Thanks Jeff. I will start by sharing some high-level thoughts and then I will pass it to Charlie.
+ 
+First, the digital identity space is a very nuanced space, and right now, we are at a tipping point. Some key events are taking place or soon will take place that will move digital identities in a direction that will dramatically change the way people proof their identities and interact with government, business, and even with each other, and… this evolution of identities will all be unstoppable. 
+ 
+So, we have been exploring those nuances and the trends, AND,…. recognizing that the changes going on in this space can definitely feel huge and daunting, we focused our work on establishing concrete courses of actions and pilot recommendations as an input to Login.gov’s strategy and prioritization process. 
+ 
+And yes, some of the recommendations imply that Login.gov could evolve into something a bit different than what it is today. And I know that once you hear these courses of actions, you will start thinking about the huge effort it will take to get to the end state. At this point, I will say it all this starts with concrete next steps and pilots that can be done now, that feel doable. I will talk about all this a bit more at the end of the presentation, but now I will now pass it to Charlie.
+
+-------------------------------------------------------------------------------------------
+
+SLIDE 2 - AGENDA
+
+[Charlie]
+
+Thank you Glori, now let's start with the agenda.
+
+Today we want to review our problem statement and give some high-level context, do a quick summary of what we did, and then share our primary recommendations captured as courses of actions. After that, we want to share some considerations and finally, we'll go into next steps and final thoughts.
+
+We want to leave 15 minutes at the end for questions and answers .
+
+-------------------------------------------------------------------------------------------
+
+SLIDE - 3 QUOTE
+
+[Charlie]
+
+Spoiler alert!!!
+
+We're going to talk a lot about Mobile Driver License today! We really liked this quote from one of our research sessions:
+
+Login.gov and mDLs is a great marriage!!
+
+-------------------------------------------------------------------------------------------
+
+SLIDE - 4 PROBLEM STATEMENT
+
+[Charlie]
+We know the digital identity space is huge and complex, but we had a very specific question to answer:
+
+How can Login .gov successfully partner with state and territorial governments to leverage existing proof-of-verification (e.g. driver's licenses) as way to simplify the identity verification process for the people?
+
+-------------------------------------------------------------------------------------------
+
+SLIDE - 5 LOGIN BY THE NUMBERS
+
+[Charlie] 
+
+In order to absorb that problem statement a little bit better, let's review some numbers so we can add context to our recommendations. Right now, Login.gov has 60M accounts, but only 1.5M of those are proofed accounts, or 2.5% of the total. This is less than .5% of the US population.
+
+On the other hand, 274M people in the US, this is approximately 90% of the population, have verified their identities at their DMVs and have a driver license or state ID.
+
+After analyzing those data points a question came to mind:
+
+What if people could use their existing ID to simplify the process instead of fully verifying themselves from scratch as required today in the existing Login.gov flow?
+
+-------------------------------------------------------------------------------------------
+
+SLIDE 6 - WHAT WE DID?
+
+[Charlie]
+
+In order to better answer our foundational questions, we talked with a large group of government organizations, states and territories, private organizations and NGO's.
+
+The list includes, of course, the GSA and Login.gov teams, USDS, The White House, DHS, CISA, Veteran's Affairs, AAMVA, Hispanic Federation, Instituto del Desarrollo de La Juventud, and
+Unidos US.
+
+Specific to states and territories, we did deep research with Arizona, Puerto Rico, Colorado and California.
+
+Having said that, we also dedicated a large amount of time to do secondary research and analysis. We did this out of necessity, as the identity space is changing day by day, in a very quick pace.
+
+-------------------------------------------------------------------------------------------
+
+SLIDE - 7 NEW SECTION
+
+[Charlie]
+
+Now, let's go into the Courses of Action and Primary Recommendations
+
+-------------------------------------------------------------------------------------------
+
+SLIDE - 8 COURSES OF ACTION
+
+[Charlie] 
+
+We will start with the two options that we're not recommending that much, so we can focus the majority of our time together on the ones we like the most.
+
+Today we'll cover:
+
+Identity Bulk Import: As the title suggests, this means one-time bulk import of large amounts of identity data from states to create identity-proofed Login.gov accounts.
+Next, Authoritative Data Source, validating evidence for an existing state government-issued credential directly with the authoritative data source.
+
+Moving along we have Federation, which means inheriting proofed identities from state DMVs that have NIST IAL2 identities and an AA2L authenticator in place.
+And finally we will focus today on Inheritance of mDLs, which means inheriting proofed identities from mobile driver’s licenses that are ISO 18013-5 compliant.
+
+Now, I will leave you folks with Edwin to cover the first two courses of action.
+
+-------------------------------------------------------------------------------------------
+
+SLIDE - 9 ENTITY BULK IMPORT
+
+[Edwin] 
+
+Thank you Charlie. 
+
+I will now talk about some important considerations for the bulk import option.In the ideal world, importing large quantities of proofed identities from States into Login.gov sounds like a good idea to quickly increase the number of Login.gov identity-proofed accounts. From a technology perspective, it is possible to do, but the heart of the effort would focus on dealing with the difference for each data models, which can be very challenging, especially considering that we have 50+ different data models.
+
+In addition, the incentives are not clear to the people. People might not need to use this account until months or years later; therefore, there are no immediate individual incentives, and people might not even be aware this process is going on or understand why this is happening.
+
+Also, for this to work smoothly, the state must agree to share PII data with Login.gov without user consent! However, non-Federal entities may prefer to have congressional authorization to share user data with Login.gov, to ensure that privacy and security protocols are acceptable and compliant with the Privacy Act.
+
+Congressional authorization may be advisable to establish a process by which Login.gov may compensate non-Federal entities for the transfer of verified identities, similar to the compensation agreement in place for SSA’s Master Death File.
+Finally, it will be very challenging binding identities; even if you have a person’s info in a database, you still need to have a process to bind a given person that is trying to access Login to a row in the database. For all these reasons, we do not recommend this alternative.  The inheritance process must have clear incentives and user consent.
+
+-------------------------------------------------------------------------------------------
+
+SLIDE - 10 AUTHORITATIVE DATA SOURCE
+
+[Edwin] 
+
+Let’s now talk about the option to validate with an authoritative data source; for States and Territories, we are talking about the DMVs.
+
+Initially, this proposal is an effective solution to enhance the proofing rate of Login.gov and to reduce expenses for third-party services, however, upon further examination, we have determined that it is not the best approach.
+
+For this to work, states must make APIs available to access and validate the DMV database, and Login.gov would need to build software to integrate with state APIs. If APIs are in place, there are no major technical obstacles in implementing this workstream.
+
+However, the alignment in terms of policy or interest from States in this workstream is a case-by-case scenario. In California, we heard that this idea was oppositional to Login’s values, and they could not imagine why states would like to help Login.gov with identity verification.
+
+In contrast, Arizona and Puerto Rico expressed interest in collaborating with Login.gov.
+
+This solution could potentially replace some components of Lexis Nexis Instant Verify and AAMVA DLDV, but it would come at the cost of Login.gov having to maintain connections with every state. This tradeoff may not be worth it.
+
+Additionally, third-party services such as LexisNexis have robust fraud detection capabilities, including the ability to detect synthetic identities and other types of fraud, which states might not be able to provide.
+
+And really, this option won’t give Login.gov much more of what AAMVA DLDV provides today. For states on AAMVA, like Arizona, some new data fields that could potentially be accessible are the social security number and photo of the person, not the photo of ID.
+
+Finally, I want to highlight the case of PR. The territory is not using AAMVA DLDV services. Some preliminary estimates show that by accessing PR’s DMV data, the proofing success rate can go from 12.5% to over 50%. This course of action could work for PR, but similar outcomes can be reached by encouraging PR to publish its data through AAMVA services. We don’t anticipate a direct connection to Puerto Rico will provide a lot of benefits over using AAMVA DLDV.
+
+And now, I will pass it to Julian to talk about federation and mdls.
+
+-------------------------------------------------------------------------------------------
+
+SLIDE 11 - FEDERATION
+
+[Julian]
+Thanks Edwin. I will start with federation. Federation could have multiple meanings in the identity space. For this context, we define it as a type of inheritance process where key identity data points from an existing proofed identity in a state are shared with Login.gov. A person signs on with their state user and password and consents to share their identity data with Login.gov to create a new identity-proofed account or update an existing unverified Login.gov account to a verified account. 
+
+This allows to proof a person only one time! Login.gov won’t need to proof this person again. The state is the one doing the identity proofing. 
+
+It is important to emphasize that participating states must have an AAL2 authentication mechanism for their DMV mobile application and/or website. The AAL2 authenticator, like Login.gov, must be bound to a IAL2 identity, this is a proofed identity according to the NIST standards. Login.gov needs to make sure a state complies with these requirements in order to become a partner.  Certifying compliance could be a challenge, and must be clearly articulated in federation agreements. If states don’t comply with prerequisites, federation is not recommended. 
+
+Also, this recommendation will require Login.gov to build new software to work with federated identities. We must also watch for the new NIST spec draft (Rev 4) which has more depth in the Federation area.
+
+Federation reduces the cost of identity verification because there is no need to use third-party services and decreases privacy concerns by allowing users to have full control of their data and how it is shared.
+
+Federation can serve as a bridge while mDLs continue to mature and Login.gov could facilitate service delivery for millions of people from states that are ready with the right conditions and technologies in place, like Arizona. 
+
+Keep in mind there are a lot nuances with federation and we go deeper in the deliverables, including a federation happy path, federation from the existing Login.gov identity verification flow, and other variations. 
+
+
+-------------------------------------------------------------------------------------------
+
+SLIDE 12 - FEDERATION RECOMMENDED ACTIONS
+
+[Julian]
+
+If Login decides to move forward with Federation we would recommend the following actions: 
+
+First, to continue Login.gov conversation with Arizona in order to discuss and agree on potential federation implementation options. This would include scope and technical requirements.
+
+In the case of Puerto Rico it would not be a Pilot but mostly assisting Puerto Rico which is almost ready with the technical prerequisites.
+
+The main purpose of this initiative would be exploring how to comply with federation prerequisites, especially exploring the implementation of Login.gov as Puerto Rico’s DMV authenticator.
+
+-------------------------------------------------------------------------------------------
+
+SLIDE 13 - INHERITANCE mDL
+
+[Julian]
+
+Now moving to Inheritance mDL.
+
+We call it “Inheriting proofed identities from mobile driver’s licenses that are ISO 18013-5 compliant”.
+
+ISO 18013-5, also known as “Part 5”, establishes interface specifications for the implementation of a driving license in association with a mobile device.
+
+Right now, there is an ISO part 5 spec that allows users to present their Mobile Driver’s Licenses at Airport Kiosks, for law enforcement officers using screen readers on highway patrols, and even for validating age at stores or clubs. All these use cases require the ID to be installed in a digital wallet to connect cryptographically with the relying party requesting verification. Let me emphasize that this is not for flash-pass o visual check. 
+
+Today, Apple and Google have native APIs that a Login.gov mobile app could use, and they are considering web APIs (included on ISO part 7), but those are at least 15 months from being ready and available, according to AAMVA experts.
+
+Inheriting an mDL is a very simple process. Let me illustrate this on the next slide.
+
+-------------------------------------------------------------------------------------------
+
+
+SLIDE 14 - INHERITANCE mDL FLOW
+
+[Julian]
+
+Let’s consider this scenario:
+
+Lisa is required to proof her age and identity in order to access a federal service online.
+
+She has a mobile device with her Driver’s license installed and active in the native digital wallet (it could be Apple or Google).
+
+She then proceeds to download the Login.gov app and when prompted she’s able to proof her identity using the mDL present in her device.
+
+Since Login.gov inherits mDLs from States via these digital wallets there is no need to proof her again.
+
+Lisa is then ready to access several federal services through the Login.gov app.
+
+-------------------------------------------------------------------------------------------
+
+SLIDE - 15 mDL RECOMMENDED ACTIONS
+
+[Julian]
+
+Now to the recommended actions for mDLs:
+
+The clearest path here is leveraging Apple and/or Google mobile APIs with a Login mobile app, even as Login stays in the loop on mDL extended capabilities specs.
+
+A bigger idea, which could be the second stage for mDL inheritance,  would be for Login to become a Digital Identity Wallet: an app that could support multiple digital claims (Driver’s Licenses, Passports, Campus IDs, fishing licenses, among others). Partners in Federal space like DHS expressed interest in Login doing this.
+ 
+Even though is not an immediate recommended action there is an additional option to leverage State apps that are jurisdiction specific and ISO Compliant. Cases like Louisiana’s LA Wallet and Florida Smart-ID could eventually help to extend Login.gov network with the main purpose of making sure nobody is left behind. 
+
+This could be a helpful strategy to take care of states that have significant advancements in this space, but don't have agreements with private entity platforms, including those with large populations, with the caveat that this would be a case-by-case API implementation which does not make it very scalable.
+
+-------------------------------------------------------------------------------------------
+
+SLIDE - 16 mDL QUOTE
+
+[Julian]
+
+We heard over and over again the need for compensating controls to take care of the different levels of risks and variations in the proofing processes we would be inheriting. (SAY IT WITH EMPHASIS) With mDLs, the evidence of our research points to the fact that we won’t need compensating controls!
+
+This process is based on standards! We can trust the process. You can get on a plane with an mDL. We don’t need to validate anything else with existing third party services like Lexis Nexis. The mDL process is doing the identity verification for us. We are reading it and inheriting the information. 
+
+Now I will pass it to Glori.
+
+-------------------------------------------------------------------------------------------
+
+SLIDE - 17 NEW SECTION
+
+[Glori]
+
+Thanks Julian. I will now discuss some secondary recommendations and other general considerations.
+
+-------------------------------------------------------------------------------------------
+
+SLIDE - 18 SUMMARY OF SECONDARY RECOMMENDATIONS
+
+[Glori] 
+
+First, to partner with states and territories we must focus on standards and have a clear integration path for different groups of states. I will explain more about this in the next slide. 
+
+#2 – Login must revise partnership agreements with states and all related processes to fit with the new identity integration models. This agreements will be different if we are talking about mDLs or about federation. We have to define the data that will be shared, etc. And, it is important to point out that we need to further evaluate IGCA and OMB policy memo and what is the legal interpretation of inherited credentials for this purpose. 
+
+Also, keep in mind that in the case of mDLs, each state must also sign its own agreement with Apple or Google, and Login.gov must also work on agreements with these companies and/or other processes as required by law or regulations.
+
+#3 – Login must analyze the impact to their cost structure. For some courses of actions we won’t need to pay for third party services anymore, so we can adapt service pricing to fit with the identity integration models. Something we heard a few times is that states are now the ones providing a service to us. States are giving a benefit to federal government, so prices need to reflect that. Depending on the services and agreement with a specific state, the price for some services could go down to zero and some people suggested that Login.gov should be the one paying states or providing some credits. We did not go deep here, so definitely this is an area that requires further analysis. 
+
+#4 – We really encourage to identify 1-2 underserved demographics and intentionally work to make it right for them. 
+
+We know that equity is at the heart of Login.gov and there is an equity study going on focusing on biometrics. And also, during the USDS discovery sprint that happened last year, we identified demographics that experience barriers to equitable delivery due to some reasons that we already know like lack of internet access, low technical literacy, etc. 
+ 
+This time, we were able to go deeper to understand the experiences and barriers for Puerto Ricans trying to proof their identities with Login.gov primarily to apply for disaster assistance loans from SBA after Hurricane Fiona hit the island last September, and also studied the barriers with Latino communities across the US trying to get the Child Tax Credit through the IRS, in that case using id.me. We will not have time to cover this in depth today, but we will include more information about this in our deliverables. 
+
+Also, keep in mind that since states are the ones that decide if they want to work with Apple and/or Google, whether or not people will have access to mDLs will depend on where they live, and as federal government we could be limited in our ability to provide services to all the people or to take care of specific underserved demographics.
+
+#5 – And finally #5, keep in mind that even in the best case scenario, mDLs won’t cover everyone, at least for now...Login.gov must continue to improve its IdV success rate. Also related to DMVs, most people agree DMVs are the way to go, and as we know 90% of the USA population have a driver’s license. Some states like Arizona feel really strong about the central role of the DMV in the identity space, and would not support this any other way, but we also have states like California that feel strong about the DMV not being the most equitable place for their people, and not the way to go.
+
+-------------------------------------------------------------------------------------------
+
+SLIDE 19 - HOW TO PARTNER WITH STATES
+
+[Glori] 
+
+Our problem statement included how Login.gov could partner with states for this purpose. The main message we heard is that each state is different, its own thing, so focusing on standards is the way to handle these differences.  And, grouping states and identifying an integration path for each group is part of this strategy.
+ 
+Here we have some states that we talked to or were able to do some research on these, and we sorted them out in in terms of tech readiness and having a clear champion. Those are the main factors we concluded can make a difference in how successful these identity integrations can be. 
+ 
+The states in green are the ones that have mdls in the Apple wallet, and I want to highlight Arizona because they are not only the first ones to work with Apple, but they also have amazing champions at their DMV. They are looking forward to work with Login.gov because they really belief this adds more value to their people. When we asked them about partnering, they immediately said: Absolutely! 
+ 
+Maryland is also working with Google right now, and we will soon start seeing more of this… states that are working with both Apple and Google. 
+ 
+The rest of the states in the chart have their own state-specific mdl implementations that are ISO compliant, and then you have a place like PR that has significant advancements, they have a law accepting their digital driver license, most people in the island are using the DMV app, but they are not ISO compliant and don’t have a clear champion. 
+ 
+Keep in mind that according to what we heard, we will soon start to see more states turn green, potentially 10 more this year, and please don’t worry about the exact position of each state. This is changing so fast. Last week we had California in a very different place and now we learned that California announced they are working on a digital wallet and they will do it “like no other state has done it”. We don’t know what that means, but we need to pay attention to more CA news in the next months.
+ 
+And then we have places like West Virginia, that is seems they are not doing anything right now, at least we couldn’t find anything. So just for awareness that we probably have a group of states that sit close to WV. 
+
+-------------------------------------------------------------------------------------------
+
+SLIDE - 20 NEXT STEPS
+
+[Glori]
+
+Ok, now I will continue to discuss some next steps. 
+
+-------------------------------------------------------------------------------------------
+
+SLIDE - 21 IDENTITY SPACE TIMELINE
+
+[Glori] 
+
+Here we have a timeline that Login.gov can use as a frame of reference for trends and events related to the digital identity ecosystem, and for the purpose of the presentation we are emphasizing those that we feel are directly relevant to the proposed courses of actions.
+
+
+For example, right now we have 250 thousand mDLs for Arizona in Apple’s Wallet. We don’t have the numbers for Maryland and Colorado, but we do know that in the next year around 15 states and territories could have adopted mdls. Also, the publication of the ISO 18013-7 standard that will allow reading mDLs over the internet should happen by mid 2024 according to AAMVA, and by 2026-27 most states will have adopted mDLs. 
+
+-------------------------------------------------------------------------------------------
+
+SLIDE - 22 STRATEGIC TIMELINE
+
+[Glori]
+
+
+So, focusing on the primary course of action, this could be a very high-level way to move forward with this efforts during the next 2 years. 
+
+We suggest to try out the Apple and Google mDL integration first. So you should go back to both companies and go deeper in discussing the potential partnership opportunities, and work on the agreements that can take a lot of time, while determining the scope for a Login.gov app MVP, conducting a technical assessment, and working on the design and user experience of this Login.gov app. Then you conduct a pilot, and evaluate how this goes.
+
+In parallel, you go deeper with the concept of the digital wallet, and collaborate with DHS that has some ongoing work related to mdls. And, then you can experiment with the concept of the digital identity wallet as part of the next iterations of the Login.gov app. 
+
+And, although not in this diagram, in the full version, you will see other parallel efforts that Login.gov could do depending on resources, like a federation pilot with Arizona, or do authoritative data source with PR. 
+
+So to recap, this is our recommended way of starting this work. It’s totally possible that you instead start with another solution first. But, either way, you should stay involved in the mDL conversation and the spec process.
+
+I will pass it to Charlie to discuss what to expect in terms of deliverables.  
+
+-------------------------------------------------------------------------------------------
+
+SLIDE - 23 WHAT TO EXPECT NEXT?
+
+[Charlie] 
+
+Thank you Glori!
+
+In terms of this project, by the end of the week you will all receive a deliverables package with the following:
+
+Executive summary
+Readout slide deck
+Courses of action
+Timeline
+State readiness matrix
+Federation diagrams with pre-requisites and variations
+Case studies of other countries
+Previous check-in and kickoff decks
+
+Just to give you an idea, here's a small snapshot of one of the artifacts...
+
+-------------------------------------------------------------------------------------------
+
+SLIDE 24 - MURAL
+
+[Charlie]
+ 
+All we discussed today is just a glimpse of this Mural board, giving the Login.gov team a framework for assessing a set of solutions, and for each, the projected impact, the gaps to overcome, and the nuances involved.
+
+The board is big and extensive, just as the identity space is.
+
+Now finally, I will leave you with Glori for some final statements.
+
+
+-------------------------------------------------------------------------------------------
+
+SLIDE 25 - FINAL THOUGHTS
+
+[Glori] 
+
+Thanks Charlie. I will now wrap up and share some final thoughts. 
+
+-------------------------------------------------------------------------------------------
+
+SLIDE 26 - "WE ALL HAD..."
+
+[Glori]
+
+We heard this a few times during our work…This dream is still possible, and maybe it is not obvious after hearing this presentation because we are not proposing a specific course of action to do this right at the DMV – although, we do mention something about this possibility in one of our artifacts. But, in essence, this is what we are doing…as events in the identity space continue to unfold, when people get a driver license, they can immediately get an mDL and if they have an mDL they can set up a Login.gov account. So, the dream is possible, maybe not in the way some of the original members of Login.gov might have envisioned this process, but even better and easier for the people. 
+
+-------------------------------------------------------------------------------------------
+
+SLIDE 27 - "WHAT IS REALLY..."
+
+[Glori]
+
+We also heard this a few times. What are the magical use cases? We talked about the way the world is evolving, and the carrots will become evident soon. People will expect government experiences that are relevant to the digital age we live in, and comparable to what they will be able to do with digital wallets to interact with the world out there: banking, healthcare, travel, shopping, etc. So, instead of identifying specific uses cases and carrots, we are focusing on what we know: this global trend is unstoppable, and Login.gov must be ready and a part of this. 
+
+
+-------------------------------------------------------------------------------------------
+
+
+SLIDE - 28 "MOBILE DRIVER'S LICENSES..."
+
+[Glori]
+
+As I mentioned earlier, the identity space is at a tipping point. And Login.gov is at a decisive moment to act now, and not wait for things to unfold. Else, the standards and integration pathways will develop in ways that don't necessarily map to Login's interests. Login.gov must be a part and a leader in this nation-wide and world-wide conversation of next-generation digital identities. Login must get involved with the ISO spec development and stay connected to AAMVA, for example, and share its unique view on public service delivery and its perspective on privacy, safety, and equity.
+
+And if Login.gov has limited resources, our #1 recommendation is to focus on mDLs.  We can start with some small next steps and create the necessary momentum to continue. 
+
+Thank you so much, now we are open to comments and questions!
+
+-------------------------------------------------------------------------------------------
+
+SLIDE - 29 THANK YOU  + Q&A
+
+-------------------------------------------------------------------------------------------
+
+END
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
